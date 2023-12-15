@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  /* tells browsers to account fo any order and padding in the values you specifty for an element's width and height. */
   box-sizing: border-box;
 }
 
