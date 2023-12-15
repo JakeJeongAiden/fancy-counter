@@ -5,7 +5,7 @@ import Title from './Title'
 import { useState } from 'react'
 
 export default function Card () {
-  const [number, setNumber] = useState(5)
+  const [number, setNumber] = useState(0)
   return (
     <div className='card'>
       <Title />
