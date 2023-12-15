@@ -6,12 +6,14 @@ import { useState } from 'react'
 
 export default function Card () {
   const [number, setNumber] = useState(0)
+  const locked = number === 5 ? true : false
+
   return (
     <div className='card'>
       <Title />
       <Count number={number} />
       <ResetButton setNumber={setNumber} />
-      <ButtonContainer setNumber={setNumber} />
+      <ButtonContainer setNumber={setNumber} locked={locked} />
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import { MinusIcon, PlusIcon } from '@radix-ui/react-icons'
 
-export default function CountButton ({ type, setNumber }) {
+export default function CountButton ({ type, setNumber, locked }) {
   const handleClick = () => {
     //count + 1 but count is not defined, so we use prev. This is second way of using setNumber.
     setNumber(prev => {
@@ -12,6 +12,7 @@ export default function CountButton ({ type, setNumber }) {
         }
         return newCount
       } else {
+        //set Upper limit to 5
         const newCount = prev + 1
         if (newCount > 5) {
           return 5
@@ -22,7 +23,7 @@ export default function CountButton ({ type, setNumber }) {
   }
 
   return (
-    <button onClick={handleClick} className='count-btn'>
+    <button disabled={locked} onClick={handleClick} className='count-btn'>
       {type === 'minus' ? (
         <MinusIcon className='count-btn-icon' />
       ) : (
