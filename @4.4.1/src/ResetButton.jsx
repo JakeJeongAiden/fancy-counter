@@ -7,7 +7,7 @@ export default function ResetButton ({ setNumber }) {
 
   return (
     <button className='reset-btn' onClick={handleClick}>
-      <ResetIcon />
+      <ResetIcon className='reset-btn-icon' />
     </button>
   )
 }
