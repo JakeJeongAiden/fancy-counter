@@ -1,8 +1,10 @@
 import { ResetIcon } from '@radix-ui/react-icons'
 
 export default function ResetButton ({ setNumber }) {
-  const handleClick = () => {
+  const handleClick = event => {
     setNumber(0)
+    //blur is a method that removes focus from the button to implement keyboard accessibility.
+    event.currentTarget.blur()
   }
 
   return (
