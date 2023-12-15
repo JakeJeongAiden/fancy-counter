@@ -9,7 +9,7 @@ export default function Card () {
   const locked = number === 5 ? true : false
 
   return (
-    <div className='card'>
+    <div className={`card ${locked && 'card--limit'}`}>
       <Title />
       <Count number={number} />
       <ResetButton setNumber={setNumber} />
