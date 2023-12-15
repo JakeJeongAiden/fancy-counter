@@ -5,7 +5,11 @@ export default function CountButton ({ type, setNumber }) {
     //count + 1 but count is not defined, so we use prev. This is second way of using setNumber.
     setNumber(prev => {
       if (type === 'minus') {
-        return prev - 1
+        const newCount = prev - 1
+        if (newCount < 0) {
+          return 0
+        }
+        return newCount
       } else {
         return prev + 1
       }
