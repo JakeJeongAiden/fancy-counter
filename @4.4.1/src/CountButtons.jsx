@@ -5,6 +5,7 @@ export default function CountButtons ({ setNumber }) {
     <div className='button-container'>
       <button
         onClick={() => {
+          //count + 1 but count is not defined, so we use prev. This is second way of using setNumber.
           setNumber(prev => prev - 1)
         }}
         className='count-btn'
