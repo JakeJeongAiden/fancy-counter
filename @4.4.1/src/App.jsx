@@ -1,14 +1,16 @@
+import Count from './Count'
+import CountButtons from './CountButtons'
+import ResetButton from './ResetButton'
+import Title from './Title'
+
 function App () {
   return (
     <main>
       <div>
-        <h1>Counter</h1>
-        <p>0</p>
-        <button>Reset</button>
-        <div>
-          <button>-</button>
-          <button>+</button>
-        </div>
+        <Title />
+        <Count />
+        <ResetButton />
+        <CountButtons />
       </div>
     </main>
   )
